@@ -16,16 +16,16 @@ int pic1Height=1002;
 int pic2Height=675;
 int pic2Height=1200;
 int largerPicDimension, smallerDimension;
-Boolean widthPic1Larger;
+Boolean widthPic1Larger=false, heightPic1larger=false;
 //
-if(pic1width >=pic1Height){ }else{}// ID Larger Dimension: Landscape and Square
+if(pic1width >=pic1Height){// ID Larger Dimension: Landscape and Square
 largerPic1Dimension= pic1Width;
 smallerPic1Dimension= pic1Height ;
 widthLarger=true;
- }else{//ID Larger Dimension:Portrait
- largerPic1Dimension= pic1Width;
- smallerPic1Dimension= pic1Height ;
- widthLarger=true;
+ } else {//ID Larger Dimension:Portrait
+ largerPic1Dimension= pic1Height;
+ smallerPic1Dimension= pic1Width ;
+ HeightLarger=true;
  }
 //
 if () {}else{}//End pic2 larger dimension ID
