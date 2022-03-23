@@ -2,7 +2,8 @@
 float rectXPic1, rectYPic1, rectWidthPic1, rectHeightPic1;
 float rectXPic2, rectYPic2, rectWidthPic2, rectHeightPic2;
 PImage pic1, pic2;
-color red=#000000;
+color black=#000000;
+background(#111111);
 //
 //Geometry
 fullScreen(); //size(900, 680); displayWidth, displayHeight
@@ -52,7 +53,6 @@ if ( widthPic2Larger == true ) imageHeightRatioPic2 = float(smallerPic2Dimension
 if ( heightPic2Larger == true ) imageWidthRatioPic2 = float(smallerPic2Dimension) / float(largerPic2Dimension);
 if ( heightPic2Larger == true ) imageHeightRatioPic2 = float(largerPic2Dimension) / float(largerPic2Dimension);
 println (imageWidthRatioPic1, imageHeightRatioPic1, imageWidthRatioPic2, imageHeightRatioPic2); //Verifying Variable Details (Ratios)
-
 //
 rectXPic1 = displayWidth*1/4;
 rectYPic1 = displayHeight*0;
@@ -63,17 +63,20 @@ rectYPic2 = displayHeight*1/2;
 rectWidthPic2 = displayWidth*6/8;
 rectHeightPic2 = displayHeight*1/2;
 //
-//Adjusted widths and heights to rectangle layouts
+//Adjusted widths and heights to rectangle layouts, final aspect ratio calculations
 float pic1WidthAdjusted, pic1HeightAdjusted, pic2WidthAdjusted, pic2HeightAdjusted;
 pic1WidthAdjusted = rectWidthPic1 * imageWidthRatioPic1;
 pic1HeightAdjusted = rectHeightPic1 * imageHeightRatioPic1;
 pic2WidthAdjusted = rectWidthPic2 * imageWidthRatioPic2;
 pic2HeightAdjusted = rectHeightPic2 * imageHeightRatioPic2;
+println(pic1Width, pic1Height, pic2Width, pic2Height);
+println( pic1WidthAdjusted, pic1HeightAdjusted, pic2WidthAdjusted, pic2HeightAdjusted);
 //
 //Rectantle Layout and Image Printing on Canvas
-fill(red);
+fill(black);
 rect(rectXPic1, rectYPic1, rectWidthPic1, rectHeightPic1); //Image 1, landscape presentation
 rect(rectXPic2, rectYPic2, rectWidthPic2, rectHeightPic2); //Image 2, landscape presentation
-image(pic1, rectXPic1, rectYPic1, pic1WidthAdjusted, pic1HeightAdjusted);
+image(pic1, rectXPic1+(rectXPic1 * 0.48), rectYPic1+(rectYPic2 *1/100), pic1WidthAdjusted, pic1HeightAdjusted);
+//println("THIS IS AN IMAGE");
 //image(pic2, rectXPic2, rectYPic2, rectWidthPic2, rectHeightPic2);
-image(pic2, rectXPic2*1.9, rectYPic2, pic2WidthAdjusted, pic2HeightAdjusted);
+image(pic2, rectXPic2+(rectXPic2 * 1.3), rectYPic2+(rectYPic2 *1/100), pic2WidthAdjusted, pic2HeightAdjusted);

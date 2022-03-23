@@ -31,6 +31,8 @@ if ( widthLarger == true ) imageHeightRatio = smallerDimension / largerDimension
 if ( heightLarger == true ) imageHeightRatio = largerDimension / largerDimension;
 if ( heightLarger == true ) imageWidthRatio = smallerDimension / largerDimension;
 println(imageWidthRatio, imageHeightRatio, smallerDimension/largerDimension, 600.0/800.0); //Verify variable values
+
+
 //Note: println() also verifies decimal places, compiler will truncate
 //Answers must be 1.0 and between 0 & 1 (decimal)
 //Ratio 1.0 similar to style="width:100%" (websites)
