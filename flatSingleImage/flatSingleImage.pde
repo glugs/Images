@@ -1,6 +1,8 @@
+
+
 /*Note: better aspect ratio algorithms exist ...
  can you figure one out?
- */
+ 
 //
 //Global Variables
 float imageX, imageY, imageWidth, imageHeigth, imageWidthRatio=0.0, imageHeightRatio=0.0;
@@ -8,7 +10,7 @@ float largerDimension, smallerDimension;
 PImage pic;
 Boolean widthLarger=false, heightLarger=false;
 //
-size(1000, 800); //fullScreen; displayWidth, displayHeight
+fullScreen(); //fullScreen; displayWidth, displayHeight
 //Population
 pic = loadImage("f3a0c38b4ceb4f359fea2b43ab32a23c.jpg"); //Dimesions: width 800, height 600
 //Note: Dimensions are found in the image file / Right Click / Properties / Details
@@ -49,19 +51,7 @@ if ( imageHeigth > height ) println("ERROR: Image is too high"); //Simple Displa
 rect(imageX, imageY, imageWidth, imageHeigth);
 image(pic, imageX, imageY, imageWidth, imageHeigth);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+ */
 
 
 
